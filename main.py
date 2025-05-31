@@ -1,3 +1,4 @@
+from config import plugins
 import random
 import os
 import time
@@ -5,7 +6,7 @@ options = [
     " 1. Commands\n",
     "2. Timed Commands\n",
     "3. Display\n",
-    "4. Help/Info\n"
+    "4. Help/Info\n",
 ]
 help = [
     " Commands-Commands gives you a command to Copy!\n",
@@ -18,7 +19,13 @@ words_1 = [
     "npm install -g typescript",
     "vim test.txt",
     "vim $(fzf)",
-    "brew uninstall emacs"
+    "brew uninstall emacs",
+    "bash file.sh",
+    "git clone http://github.com/a/repo.git",
+    "git commit -m 'A really cool commit message here",
+    "apt update",
+    "cowsay '(:'",
+    "sl"
 ]
 W_options = [
     "remove nvim with brew"
