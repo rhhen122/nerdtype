@@ -7,6 +7,7 @@ options = [
     "2. Timed Commands\n",
     "3. Display\n",
     "4. Help/Info\n",
+    "5. Keep Going!\n"
 ]
 help = [
     " Commands-Commands gives you a command to Copy!\n",
@@ -62,6 +63,24 @@ def handle_game(x):
     if x == 4:
         print(*help)
         return True
+    if x == 5:
+        y = 0
+        while True:
+            goal = random.choice(words_1)
+            print(goal)
+            time.sleep(1)
+            os.system("clear")
+            if y == True:
+                win("Keep Going!")
+            elif y == 0:
+                print("")
+            else:
+                lose("Keep Going!")
+            in_5 = input(": ")
+            if in_5 == goal:
+                y = True
+            else:
+                y = False
 def handle_optionin(x):
     if x == "1":
         game_1 = handle_game(1)
@@ -87,6 +106,12 @@ def handle_optionin(x):
             win("Help")
         else:
             lose("Help")
+    if x == "5":
+        game_5 = handle_game(5)
+        if game_5 == True:
+            win("Keep Going!")
+        else:
+            lose("Keep Going!")
 def handle_start():
     print(*options)
     optionin = input(": ")
