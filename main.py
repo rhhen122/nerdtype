@@ -1,4 +1,5 @@
-from config import plugins
+from config import your_game
+from config import your_game_name
 import random
 import os
 import time
@@ -11,7 +12,7 @@ options = [
 ]
 help = [
     " Commands-Commands gives you a command to Copy!\n",
-    "Timed Commands-Does the same as Commands except it shows you for a breif time\n"
+    "Timed Commands-Does the same as Commands except it shows you for a breif time\n",
    "Displays all commands that can be ruturned\n",
 ]
 words_1 = [
@@ -72,8 +73,6 @@ def handle_game(x):
             os.system("clear")
             if y == True:
                 win("Keep Going!")
-            elif y == 0:
-                print("")
             else:
                 lose("Keep Going!")
             in_5 = input(": ")
