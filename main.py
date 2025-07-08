@@ -1,3 +1,4 @@
+# COPYRIGHT: Roky Edward Iven Henderson
 from config import your_game
 from config import your_game_name
 import random
